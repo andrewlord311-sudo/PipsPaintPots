@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+<title>Pip's Paint Pots</title>
+<link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+
+<!-- HOME -->
+<section id="screen-home" class="screen active">
+  <h1>🎨 Pip's Paint Pots</h1>
+  <p class="subtitle">Mix colours with the guinea pigs!</p>
+  <!-- Her stars, shared with Pip's Maths; tap to go and spend them in the garden there. -->
+  <a class="home-stars garden-link" id="home-stars" title="My Garden">⭐ 0</a>
+  <div class="home-pigs" id="home-pigs"></div>
+  <div class="home-buttons">
+    <button class="game-tile" id="play-btn">
+      <span class="tile-emoji">🖌️</span>
+      <span>Mix<br>colours</span>
+    </button>
+    <a class="game-tile garden-link">
+      <span class="tile-emoji">🌳</span>
+      <span>My<br>Garden</span>
+    </a>
+  </div>
+  <p class="home-note">Stars you earn here go to the Guinea Pig Garden, the same as in Pip's Maths.</p>
+</section>
+
+<!-- THE GAME (see paint.js) -->
+<section id="screen-paint" class="screen">
+  <button class="back-btn" data-back>←</button>
+  <div class="stage-row" id="paint-stages"></div>
+  <p class="stage-caption" id="paint-stages-caption"></p>
+  <div class="progress-dots" id="paint-dots"></div>
+  <div class="pt-play" id="pt-play"></div>
+  <p class="pt-msg" id="pt-msg"></p>
+  <button class="stuck-btn hidden" id="pt-show">Show me the recipe</button>
+  <div class="pt-actions" id="pt-actions"></div>
+</section>
+
+<!-- COMPLETE -->
+<section id="screen-complete" class="screen">
+  <div class="complete-card">
+    <div class="complete-emoji" id="complete-emoji">🎨🐹⭐</div>
+    <h2 id="complete-title">Beautiful colours!</h2>
+    <p id="complete-message"></p>
+    <div class="new-pig-reveal hidden" id="new-pig-reveal"></div>
+    <div class="complete-buttons">
+      <button class="big-btn" id="play-again-btn">Play Again</button>
+      <button class="big-btn secondary" id="home-btn">Home</button>
+    </div>
+  </div>
+</section>
+
+<script src="pigs.js?v=1"></script>
+<script src="paint.js?v=1"></script>
+</body>
+</html>
